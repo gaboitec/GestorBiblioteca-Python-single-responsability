@@ -32,7 +32,7 @@ class ListaLibros:
         else:
             print("#LISTA DE LIBROS")
             for codigo, datos in self.libros:
-                print(f"Codigo: {codigo} - {datos.get_libro()}\n")
+                print(f"{datos.get_libro()}\n")
                 print("...")
 
     def eliminar(self):
@@ -77,20 +77,20 @@ class ListaUsuarios:
             print("No hay usuarios")
         else:
             print("#LISTA DE LIBROS")
-            for codigo, datos in self.libros:
-                print(f"Codigo: {codigo} - {datos.get_libro()}\n")
+            for carne, datos in self.usuarios:
+                print(f"{datos.get_usuario()}\n")
                 print("...")
 
     def eliminar(self):
-        if not self.libros:
-            print("No hay libros")
+        if not self.usuarios:
+            print("No hay usuarios")
         else:
-            codigo = input("Ingrese el codigo del libro: ")
-            if codigo in self.libros:
-                del self.libros[codigo]
-                print("...Libro eliminado\n")
+            carne = input("Ingrese el carne a buscar: ")
+            if carne in self.usuarios:
+                del self.usuarios[carne]
+                print("...Usuario eliminado\n")
             else:
-                print("El libro no existe")
+                print("El usuario no existe")
 
 class Gestiones:
     pass
